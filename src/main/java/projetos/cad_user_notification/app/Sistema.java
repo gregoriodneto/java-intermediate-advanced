@@ -1,21 +1,29 @@
 package projetos.cad_user_notification.app;
 
-import projetos.cad_user_notification.domain.Notificador;
-import projetos.cad_user_notification.domain.Repositorio;
-import projetos.cad_user_notification.domain.Usuario;
+import projetos.cad_user_notification.domain.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Sistema {
     private final Repositorio repositorio;
-    private final Notificador notificador;
+    private final List<EventoUsuarioListener> listeners = new ArrayList<>();
 
-    public Sistema(Repositorio repositorio, Notificador notificador) {
+    public Sistema(Repositorio repositorio) {
         this.repositorio = repositorio;
-        this.notificador = notificador;
+    }
+
+    public void adicionarListener(EventoUsuarioListener listener) {
+        listeners.add(listener);
     }
 
     public void cadastrarUsuario(String nome) {
         Usuario usuario = new Usuario(nome);
         repositorio.salvar(usuario);
-        notificador.enviarMensagem(usuario, "Cadastro realizado com sucesso!");
+
+        // Notificar todos os ouvintes
+        for (EventoUsuarioListener listener : listeners) {
+            listener.quandoUsuarioCadastrado(usuario);
+        }
     }
 }
