@@ -1,4 +1,4 @@
-package oop.abstracao;
+package oop.principios.abstracao;
 
 public class Gerente extends Funcionario {
     private double salario;

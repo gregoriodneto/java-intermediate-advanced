@@ -1,4 +1,4 @@
-package oop.encapsulamento;
+package oop.principios.encapsulamento;
 
 public class Main {
     public static void main(String args[]) {

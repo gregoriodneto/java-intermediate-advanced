@@ -1,4 +1,4 @@
-package oop.encapsulamento;
+package oop.principios.encapsulamento;
 
 public class Produto {
     private String nome;

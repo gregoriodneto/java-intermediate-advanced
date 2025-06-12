@@ -1,4 +1,4 @@
-package oop.heranca;
+package oop.principios.heranca;
 
 public class Main {
     public static void main(String args[]) {

@@ -1,4 +1,4 @@
-package oop.polimorfismo;
+package oop.principios.polimorfismo;
 
 public class Main {
     public static void main(String args[]) {

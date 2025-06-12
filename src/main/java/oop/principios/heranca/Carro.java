@@ -1,4 +1,4 @@
-package oop.heranca;
+package oop.principios.heranca;
 
 public class Carro extends Veiculo{
     private int quantidadePortas;

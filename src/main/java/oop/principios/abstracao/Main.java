@@ -1,4 +1,4 @@
-package oop.abstracao;
+package oop.principios.abstracao;
 
 public class Main {
     public static void main(String args[]) {

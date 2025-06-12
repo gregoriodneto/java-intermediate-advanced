@@ -1,4 +1,4 @@
-package oop.polimorfismo;
+package oop.principios.polimorfismo;
 
 public class Cachorro extends Animal {
     @Override
