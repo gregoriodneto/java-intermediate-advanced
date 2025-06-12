@@ -13,9 +13,9 @@ Este repositório contém exercícios, exemplos e notas focados em conceitos Jav
     - ✅ Polymorphism
 
 - **Best Practices**
-    - ☐ Favor composition over inheritance
-    - ☐ Single Responsibility Principle (SRP)
-    - ☐ Clean code with cohesive and decoupled objects
+    - ✅ Favor composition over inheritance
+    - ✅ Single Responsibility Principle (SRP)
+    - ✅ Clean code with cohesive and decoupled objects
 
 - **Suggested Projects**
     - ☐ Banking system with polymorphism

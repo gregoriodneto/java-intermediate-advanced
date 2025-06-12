@@ -1,8 +1,6 @@
 package projetos.cad_user_notification;
 
 import projetos.cad_user_notification.app.Sistema;
-import projetos.cad_user_notification.domain.Historico;
-import projetos.cad_user_notification.domain.Notificador;
 import projetos.cad_user_notification.domain.Repositorio;
 import projetos.cad_user_notification.infra.BancoEmMemoria;
 import projetos.cad_user_notification.infra.EmailConsole;
