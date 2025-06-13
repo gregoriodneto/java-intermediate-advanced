@@ -2,9 +2,16 @@ package projetos.cad_user_notification;
 
 import projetos.cad_user_notification.app.Sistema;
 import projetos.cad_user_notification.domain.Repositorio;
+import projetos.cad_user_notification.strategies.NomeMinimoTresCaracteres;
+import projetos.cad_user_notification.strategies.NomeNaoNuloOuVazio;
+import projetos.cad_user_notification.strategies.ValidadorComposto;
+import projetos.cad_user_notification.strategies.ValidadorStrategy;
 import projetos.cad_user_notification.infra.BancoEmMemoria;
 import projetos.cad_user_notification.infra.EmailConsole;
 import projetos.cad_user_notification.infra.HistoricoConsole;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /*
  * Projeto baseado em boas práticas de programação orientada a objetos.
@@ -33,12 +40,17 @@ public class Main {
         EmailConsole notificador = new EmailConsole();
         HistoricoConsole historico = new HistoricoConsole();
 
-        Sistema sistema = new Sistema(repositorio);
+        List<ValidadorStrategy> validadores = new ArrayList<>();
+        validadores.add(new NomeNaoNuloOuVazio());
+        validadores.add(new NomeMinimoTresCaracteres());
+        ValidadorComposto strategy = new ValidadorComposto(validadores);
+
+        Sistema sistema = new Sistema(repositorio, strategy);
 
         sistema.adicionarListener(historico);
         sistema.adicionarListener(notificador);
 
         sistema.cadastrarUsuario("Maria");
-        sistema.cadastrarUsuario("João");
+        sistema.cadastrarUsuario(null);
     }
 }
