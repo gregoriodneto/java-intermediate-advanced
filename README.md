@@ -25,9 +25,9 @@ Este repositório contém exercícios, exemplos e notas focados em conceitos Jav
 
 ### 🧩 Interfaces, Abstract Classes & Modifiers
 
-- ☐ `interface`, `abstract class`, `default`, `static`
-- ☐ Multiple interfaces vs single inheritance
-- ☐ Visibility: `public`, `protected`, `private`, `package-private`
+- ✅ `interface`, `abstract class`, `default`, `static`
+- ✅ Multiple interfaces vs single inheritance
+- ✅ Visibility: `public`, `protected`, `private`, `package-private`
 
 ---
 
